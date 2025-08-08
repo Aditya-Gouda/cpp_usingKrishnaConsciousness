@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+struct SadhanaEntry
+{
+    string date;
+    int japaRounds;
+    int bhagavatamMinutes;
+    string seva;
+};
+
+int main()
+{
+    SadhanaEntry today;
+
+    cout << "Enter date (e.g., 05-08-2025): ";
+    cin >> today.date;
+
+    cout << "How many rounds did you chant today? ";
+    cin >> today.japaRounds;
+
+    cout << "How many minutes did you read Śrīmad-Bhāgavatam? ";
+    cin >> today.bhagavatamMinutes;
+
+    cin.ignore(); // to clear newline from previous input
+    cout << "What seva did you do today? ";
+    getline(cin, today.seva);
+
+    cout << "\n🌸 Your Sādhanā Report 🌸" << endl;
+    cout << "Date: " << today.date << endl;
+    cout << "Japa Rounds: " << today.japaRounds << endl;
+    cout << "Bhāgavatam Reading: " << today.bhagavatamMinutes << " mins" << endl;
+    cout << "Seva: " << today.seva << endl;
+
+    return 0;
+}
